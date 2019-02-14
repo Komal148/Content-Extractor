@@ -22,13 +22,13 @@ public class PdfExtractorApplication {
         pdfDomainObj = contentExtraction.extractPdf();
 
         // this will convert java Object to Json Object
-        ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
-        String json = ow.writeValueAsString(pdfDomainObj);
-        System.out.println(json);
+//        ObjectWriter objectWriter = new ObjectMapper().writer().withDefaultPrettyPrinter();
+//        String json = objectWriter.writeValueAsString(pdfDomainObj);
+//        System.out.println(json);
 
-//        Gson gson = new Gson();
-//        String jsonString = gson.toJson(document);
-//        System.out.println(jsonString);
+        Gson gson = new Gson();
+        String jsonString = gson.toJson(pdfDomainObj);
+        System.out.println(jsonString);
 
 	}
 
